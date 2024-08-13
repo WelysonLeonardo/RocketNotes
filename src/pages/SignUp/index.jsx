@@ -20,6 +20,16 @@ export function SignUp() {
         }
 
         api.post("/users", { name, email, password })
+        .then(() => {
+            alert("Usuário cadastrado com sucesso!");
+        })
+        .catch(error => {
+            if(error.response){
+                alert(error.response.data.message);
+            } else {
+                alert ("Não foi possível cadastrar sua conta");
+            }
+        })
     }
 
     return (
