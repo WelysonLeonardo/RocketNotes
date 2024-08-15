@@ -40,6 +40,7 @@ export const Content = styled.div`
 
   > button:first-child {
     align-self: end;
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
   > h1 {
@@ -52,5 +53,9 @@ export const Content = styled.div`
     font-size: 16px;
     margin-top: 16px;
     text-align: justify;
+  }
+
+  button {
+    
   }
 `;
